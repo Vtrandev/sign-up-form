@@ -50,15 +50,15 @@ img {
 }
 
 .right-page {
-    padding: 32px;
+  padding: 32px;
 }
 
 .box_first {
-    padding: 16px;
+  padding: 16px;
 }
 
 .paragraph {
-    margin-top: 20%;
+  margin-top: 20%;
 }
 
 .form {
@@ -67,7 +67,7 @@ img {
 }
 
 .form_pair {
-    display: flex;
+  display: flex;
 }
 
 .form_box {
@@ -76,19 +76,28 @@ img {
   font-size: small;
 }
 
-.form, .form_pair, .form_box {
-    padding: 8px 28px 8px 0px;
+.form,
+.form_pair,
+.form_box {
+  padding: 8px 28px 8px 0px;
 }
 
 input {
-    width: 200px;
-    font-size: medium;
-    padding: 4px;
-    margin: 4px 0;
+  width: 200px;
+  font-size: medium;
+  padding: 4px;
+  margin: 4px 0;
+  border-radius: 4px;
+  border: 1px solid gray;
+}
+
+input:focus {
+  outline: rgba(69, 33, 214, 0.2) solid 1px;
+  box-shadow: 2px 2px 2px 1px rgb(0 0 0 / 20%);
 }
 
 button {
-    padding: 8px 32px;
-    margin: 16px 0;
-    width: 30%;
+  padding: 8px 32px;
+  margin: 16px 0;
+  width: 30%;
 }

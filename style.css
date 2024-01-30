@@ -6,6 +6,20 @@
   /* border: 1px solid black; */
 }
 
+:root {
+    --black: rgb(11, 11, 11);
+}
+
+body {
+    background-color: var(--black);
+}
+
+a {
+    text-decoration: none;
+    font-weight: bold;
+    color: #596D48;
+}
+
 .row {
   width: auto;
   height: 100vh;
@@ -27,19 +41,23 @@
 .banner {
   position: absolute;
   opacity: 80%;
-  background-color: black;
+  background-color: var(--black);
   top: 30%;
   left: 0;
   right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .title {
   color: white;
   text-align: center;
   font-size: 50px;
+  padding: 24px 0;
 }
 
-img {
+.background {
   background-size: cover; /* Resize the background image to cover the entire container */
   width: 120%;
   min-height: 100%;
@@ -49,22 +67,27 @@ img {
   z-index: -10;
 }
 
+.title__logo {
+    /* width: 100%; */
+    max-height: 100px;
+}
+
 .right-page {
-  padding: 32px;
+  background-color: rgb(240, 240, 240);
 }
 
 .box_first {
-  padding: 16px;
+  margin: 15% 0;
 }
 
-.paragraph {
-  margin-top: 20%;
-}
+.box_first, .login__message {
+    padding: 0 48px;
+} 
 
-.form {
-  display: flex;
-  flex-direction: column;
-}
+/* .paragraph {
+} */
+
+
 
 .form_pair {
   display: flex;
@@ -79,8 +102,15 @@ img {
 .form,
 .form_pair,
 .form_box {
-  padding: 8px 28px 8px 0px;
+  padding: 8px 28px 8px 0;
 }
+
+.form {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    padding-left: 48px;
+  }
 
 input {
   width: 200px;
@@ -88,16 +118,36 @@ input {
   padding: 4px;
   margin: 4px 0;
   border-radius: 4px;
-  border: 1px solid gray;
+  border: 1px solid rgba(20, 11, 203, 0.2);
 }
+
 
 input:focus {
   outline: rgba(69, 33, 214, 0.2) solid 1px;
-  box-shadow: 2px 2px 2px 1px rgb(0 0 0 / 20%);
+  box-shadow: 2px 2px 2px 1px rgba(20, 11, 203, 0.2);
+}
+
+.invalid {
+    content:"Invalid entry";
+    border-color: red;
+}
+
+.help {
+  display: none;
+}
+
+.invalid + .help {
+  display: block;
+  color: red;
 }
 
 button {
-  padding: 8px 32px;
+  padding: 16px 32px;
   margin: 16px 0;
   width: 30%;
+  color: white;
+  background-color: #596D48;
+  border: none;
+  border-radius: 10px;
+  font-weight: bold;
 }
